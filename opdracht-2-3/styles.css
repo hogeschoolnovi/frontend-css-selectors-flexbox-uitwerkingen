@@ -1,0 +1,77 @@
+/*CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F3D9;
+    font-family: Avenir, Arial, sans-serif;
+    color: #030027;
+    text-align: center;
+}
+
+.company-brand-name {
+    font-weight: bold;
+    /*Zet tekst nooit hardcoded als hoofdletters op de pagina, maar transformeer de letters met CSS*/
+    text-transform: uppercase;
+}
+
+.navigation {
+    background-color: #030027;
+    color: #FFFFFF;
+    display: flex;
+    /* row is de default, maar toch toegevoegd voor leesbaarheid */
+    flex-direction: row;
+    /* uitlijning van links naar rechts, want direction = row (horizontaal) */
+    justify-content: space-between;
+    /*Boven en onder 30px + links en rechts 40px */
+    padding: 30px 40px;
+}
+
+.navigation ul {
+    display: flex;
+    /* row is de default, maar toch toegevoegd voor leesbaarheid */
+    flex-direction: row;
+    /*Wanneer we geen basis-breedte meegeven, hebben de items ook geen ruimte om zich evenredig te verdelen!*/
+    flex-basis: 400px;
+    /* alle items groeien NIET mee in verhouding tot de overgebleven ruimte */
+    flex-grow: 0;
+    /* alle items worden evenredig kleiner dan de basis wanneer er geen ruimte is */
+    flex-shrink: 1;
+    /* uitlijning van links naar rechts, want direction = row (horizontaal) */
+    justify-content: space-between;
+    /*Zo haal je de bullets van de lijst af*/
+    list-style: none;
+}
+
+.about-us-section {
+    padding: 40px;
+}
+
+.inner-container {
+    display: flex;
+    /* row is de default, maar toch toegevoegd voor leesbaarheid */
+    flex-direction: row;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.info-article {
+    background-color: #C16E70;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    /* uitlijning van boven naar beneden, want direction = column (verticaal) */
+    justify-content: flex-end;
+    flex-basis: 280px;
+    /* alle items groeien NIET mee in verhouding tot de overgebleven ruimte */
+    flex-grow: 0;
+    /* alle items worden evenredig kleiner dan de basis wanneer er geen ruimte is */
+    flex-shrink: 1;
+}
